@@ -1,0 +1,29 @@
+.card {
+  border: none;
+}
+
+.img {
+  width: auto;
+  height: 18vh;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tittle-tag {
+  color: #9ca2a7;
+  font-size: 12px;
+  padding-top: 8px;
+  margin-bottom: 0.6vh;
+}
+
+.card-title {
+  max-width: 95%;
+  word-break: break-word;
+}
+
+@media only screen and (max-width: 575px) {
+  .img {
+    height: 22vh;
+  }
+}

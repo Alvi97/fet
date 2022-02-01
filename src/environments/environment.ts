@@ -6,6 +6,17 @@ export const environment = {
   production: false
 };
 
+export const CONFIG = {
+  space: 'tlqfiok8qhck',
+  accessToken:
+    'KQ17Gazu9xSq2yNvwDDOASVkxTvF55SOAkE0_6BRzmY',
+    environment:'test',
+    host:'cdn.contentful.com',
+  contentTypeIds: {
+    blogposts: 'blogPost',
+  },
+};
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

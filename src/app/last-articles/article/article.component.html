@@ -1,0 +1,10 @@
+<div class="card">
+
+  <div class="img"
+    [ngStyle]="  {'background-image': article?.fields?.heroImage?.fields?.file?.url ? ' url(' + article?.fields?.heroImage?.fields?.file?.url + ')' :'url(\'../../../assets/no_image.png\')'}">
+  </div>
+  <div>
+    <p class="tittle-tag">by {{article.fields.author.fields.name}}</p>
+    <h6 class="card-title">{{article.fields.title}}</h6>
+  </div>
+</div>
