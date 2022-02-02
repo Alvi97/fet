@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Asset, createClient, Entry } from 'contentful';
+import { Asset, AssetCollection, createClient, Entry } from 'contentful';
 import { CONFIG } from '../../environments/environment';
 import { BehaviorSubject, from, Observable } from 'rxjs';
 import { map, pluck, take, tap } from 'rxjs/operators';
@@ -22,11 +22,21 @@ export class BlogPostService {
 
   constructor() { }
 
-  getProducts(query?: object): Observable<Asset> {
+  getProducts(query?: object): Observable<any> {
     return from(this.cdaClient.getEntries(Object.assign({
       content_type: CONFIG.contentTypeIds.blogposts
     }, query))).pipe(pluck('items'))
   }
+
+  //dummy function implementation using queries as there was pagination 
+  
+
+  // getProductsOnClick(query?: object): Observable<any> {
+  //   return from(this.cdaClient.getEntries(Object.assign({
+  //     content_type: CONFIG.contentTypeIds.blogposts
+  //   }, query)))
+  // }
+
 
 }
 
